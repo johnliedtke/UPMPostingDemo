@@ -32,6 +32,7 @@ class ListingsViewController: UICollectionViewController {
     
     func fetchListings() {
         var query = PFQuery(className: "Listing")
+        query.orderByDescending("createdAt")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if let downcastedObjects = objects as? [PFObject] {
                 // Add listings to array
@@ -79,6 +80,7 @@ class ListingsViewController: UICollectionViewController {
         var imageFile = listing["photo"] as PFFile
         imageFile.getDataInBackgroundWithBlock { (data: NSData!, error: NSError!) -> Void in
             var image = UIImage(data: data)
+            cell.image = nil
             cell.image = image
             cell.stopLoading()
         }
