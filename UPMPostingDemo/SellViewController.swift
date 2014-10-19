@@ -16,42 +16,20 @@ class SellViewController: UITableViewController, UIImagePickerControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
 
 
     @IBAction func post(sender: AnyObject) {
         
 
-        if self.imageData == nil {
-            return;
-        }
-        
-        var imageFile = PFFile(name: "meow.png", data: self.imageData)
-        imageFile.saveInBackgroundWithBlock { (success: Bool, error: NSError!) -> Void in
-            if error == nil {
-                var newListing: PFObject = PFObject(className: "Listing")
-                newListing.setObject(self.titleField.text, forKey: "title")
-                newListing.setObject(self.priceField.text, forKey: "price")
-                newListing.setObject(imageFile, forKey: "photo")
-                
-                newListing.saveInBackgroundWithBlock { (success: Bool, error: NSError!) -> Void in
-                    NSLog("Succesfully saved listing")
-                    
-                } // end save listing
-            } // end no eroor
-        }
-
+    
     }
     
     func cameraButtonTapped() {

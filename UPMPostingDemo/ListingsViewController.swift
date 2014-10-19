@@ -14,12 +14,13 @@ import ListingCollectionView
 let reuseIdentifier = "listingCollectionViewCell"
 
 
-class ListingsViewController: UICollectionViewController {
+class ListingsViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     var listings: [PFObject] = [PFObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.hidesBarsOnSwipe = true
         
         self.fetchListings()
     }
@@ -86,8 +87,23 @@ class ListingsViewController: UICollectionViewController {
         }
         return cell
     }
-
-
+    
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        var spacing:CGFloat = 30.0
+        
+        // Calculate Height
+        var screenWidth = UIScreen.mainScreen().bounds.size.width
+        var width:CGFloat = (screenWidth - spacing) / 2.0
+        
+        // Calculate Width
+        var tabBar:CGFloat = (self.tabBarController?.tabBar.frame.height)!
+        var navBar:CGFloat = (self.navigationController?.navigationBar.frame.height)!
+        var height:CGFloat = (self.view.bounds.size.height - (spacing + tabBar + navBar)) / 2.1
+        
+        return CGSizeMake(width, height)
+    }
     // MARK: UICollectionViewDelegate
 
     /*

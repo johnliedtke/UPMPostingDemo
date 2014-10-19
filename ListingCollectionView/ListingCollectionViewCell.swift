@@ -8,15 +8,10 @@
 
 import UIKit
 
+
+
 @IBDesignable
 public class ListingCollectionViewCell: UICollectionViewCell {
-    
-    public var title:String = "meow" {
-        didSet {
-            titleLabel.text = title
-            titleLabel.sizeToFit()
-        }
-    }
     
     public var image:UIImage? {
         didSet {
@@ -31,6 +26,12 @@ public class ListingCollectionViewCell: UICollectionViewCell {
 
     }
     
+    public var title: String? {
+        didSet {
+            titleTextView.text = title
+        }
+    }
+    
     public func startLoading () {
         self.activityIndicator.startAnimating()
     }
@@ -39,30 +40,43 @@ public class ListingCollectionViewCell: UICollectionViewCell {
         self.activityIndicator.stopAnimating()
     }
     
+    override public var  highlighted: Bool {
+        didSet {
+            if highlighted {
+                self.backgroundColor = highlighedBackgroundColor
+            } else {
+                self.backgroundColor = defaultBackgroundColor
+            }
+        }
+    }
+    var defaultBackgroundColor = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1.0)
+    var highlighedBackgroundColor = UIColor(red: 245.0/255, green: 245.0/255, blue: 245.0/255, alpha: 1.0)
 
     @IBOutlet public weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-  
+    @IBOutlet var titleTextView: UITextView!
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         
-        layer.backgroundColor = UIColor(red: 237/255, green: 237/255, blue: 237/255, alpha: 1.0).CGColor
-        // Set height...
-        var screenRect:CGRect = UIScreen.mainScreen().bounds
-        
+        layer.backgroundColor = self.defaultBackgroundColor.CGColor
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor(red: 227/255, green: 227/255, blue: 227/255, alpha: 1.0).CGColor
 
-        if screenRect.width <= 320 {
-            
-        }
-
-        
-
+       // self.titleTextView.backgroundColor = UIColor.clearColor()
         
     }
+    
+    
+    
+    override public func awakeFromNib() {
+        super.awakeFromNib()
+        self.titleTextView.removeInsets()
+
+
+    }
+    
+    
     
 }

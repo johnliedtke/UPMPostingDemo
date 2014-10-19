@@ -32,6 +32,9 @@
 		526D9BDF19E203ED001DE50E /* ListingCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526D9BCB19E203ED001DE50E /* ListingCollectionView.framework */; };
 		526D9BE019E203ED001DE50E /* ListingCollectionView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 526D9BCB19E203ED001DE50E /* ListingCollectionView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		526D9BEB19E20451001DE50E /* ListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9BEA19E20451001DE50E /* ListingCollectionViewCell.swift */; };
+		5270002519F2F65900A2911D /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002419F2F65900A2911D /* TextViewExtension.swift */; };
+		5270002619F2F8CF00A2911D /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002419F2F65900A2911D /* TextViewExtension.swift */; };
+		5270002C19F30ED300A2911D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002B19F30ED300A2911D /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,8 @@
 		526D9BDA19E203ED001DE50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		526D9BDB19E203ED001DE50E /* ListingCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCollectionViewTests.swift; sourceTree = "<group>"; };
 		526D9BEA19E20451001DE50E /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
+		5270002419F2F65900A2911D /* TextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewExtension.swift; sourceTree = "<group>"; };
+		5270002B19F30ED300A2911D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +197,7 @@
 				52206CA019E1E635002DDADD /* Main.storyboard */,
 				52206CA319E1E635002DDADD /* Images.xcassets */,
 				52206CA519E1E635002DDADD /* LaunchScreen.xib */,
+				5270002319F2F63A00A2911D /* UI Extensions */,
 				52206C9A19E1E635002DDADD /* Supporting Files */,
 				52206CBF19E1E890002DDADD /* UPMPostingDemo-Bridging-Header.h */,
 			);
@@ -277,6 +283,15 @@
 				526D9BDA19E203ED001DE50E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5270002319F2F63A00A2911D /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5270002419F2F65900A2911D /* TextViewExtension.swift */,
+				5270002B19F30ED300A2911D /* UIColorExtension.swift */,
+			);
+			name = "UI Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,7 +471,9 @@
 			files = (
 				52206C9D19E1E635002DDADD /* AppDelegate.swift in Sources */,
 				520A1CDA19E209480087936F /* ListingsViewController.swift in Sources */,
+				5270002C19F30ED300A2911D /* UIColorExtension.swift in Sources */,
 				520A1CDC19E20ECE0087936F /* SellViewController.swift in Sources */,
+				5270002519F2F65900A2911D /* TextViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				526D9BEB19E20451001DE50E /* ListingCollectionViewCell.swift in Sources */,
+				5270002619F2F8CF00A2911D /* TextViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

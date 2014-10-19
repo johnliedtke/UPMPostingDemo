@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        // Parse initialization
+        /* Parse initialization */
         Parse.setApplicationId("6ZVQsgQNW5KpO6H5os6JxGOxZAFCEdfLua2T3PAm",
             clientKey: "5bsP9MYcxGGU1bZkKC2ovgySNyLkCk5223irCGG0")
         
@@ -28,12 +28,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaultACL.setPublicReadAccess(true)
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
         
+        /* Tab Bar Appearance */
+        var tabBarController = self.window?.rootViewController as UITabBarController
+        var tabBar = tabBarController.tabBar
+        if let items = tabBar.items as? [UITabBarItem] {
+            var newListingsTabBarItem = items[0]
+            newListingsTabBarItem.image = UIImage(named: "new.png").imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+            newListingsTabBarItem.selectedImage = UIImage(named: "newSelected.png").imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+            
+        }
+      
         
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightPurpleColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.darkPurpleColor()], forState:.Selected)
+
+
+
+         /* Parse Notifictions */
 //        var userNotificationTypes: UIUserNotificationType = (UIUserNotificationType.Alert |
 //            UIUserNotificationType.Badge |
 //            UIUserNotificationType.Sound)
 //        var settings: UIUserNotificationSettings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
-        
+//        
        
 
         
