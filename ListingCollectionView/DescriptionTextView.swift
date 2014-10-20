@@ -28,7 +28,7 @@ class DescriptionTextView: UITextView {
         self.layer.borderColor = UIColor(red: 235.0/255.0, green: 235.0/255.0, blue: 235.0/255.0, alpha: 1.0).CGColor
         self.layer.cornerRadius = 10
         
-        let inset: CGFloat = 15.0
+        let inset: CGFloat = 10.0
         
         self.textContainerInset = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset - 5)
         

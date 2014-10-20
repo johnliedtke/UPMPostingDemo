@@ -66,24 +66,24 @@ class ListingsViewController: UICollectionViewController, UICollectionViewDelega
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        
-        return self.listings.count //self.listings.count
+        return 8//self.listings.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as ListingCollectionViewCell
 
-        var listing = listings[indexPath.row] as PFObject
-        cell.title = listing["title"] as? String
-        cell.price = listing["price"] as? String
-        
-        cell.startLoading()
-        var imageFile = listing["photo"] as PFFile
-        imageFile.getDataInBackgroundWithBlock { (data: NSData!, error: NSError!) -> Void in
-            var image = UIImage(data: data)
-            cell.image = nil
-            cell.image = image
-            cell.stopLoading()
-        }
+//        var listing = listings[indexPath.row] as PFObject
+//        cell.title = listing["title"] as? String
+//        cell.price = listing["price"] as? String
+//        
+//        cell.startLoading()
+//        var imageFile = listing["photo"] as PFFile
+//        imageFile.getDataInBackgroundWithBlock { (data: NSData!, error: NSError!) -> Void in
+//            var image = UIImage(data: data)
+//            cell.image = nil
+//            cell.image = image
+//            cell.stopLoading()
+//        }
         return cell
     }
     
@@ -92,14 +92,22 @@ class ListingsViewController: UICollectionViewController, UICollectionViewDelega
         
         var spacing:CGFloat = 30.0
         
-        // Calculate Height
+        // Calculate Width
         var screenWidth = UIScreen.mainScreen().bounds.size.width
         var width:CGFloat = (screenWidth - spacing) / 2.0
         
-        // Calculate Width
+        // Calculate Height
         var tabBar:CGFloat = (self.tabBarController?.tabBar.frame.height)!
         var navBar:CGFloat = (self.navigationController?.navigationBar.frame.height)!
-        var height:CGFloat = (self.view.bounds.size.height - (spacing + tabBar + navBar)) / 2.1
+        
+        var height:CGFloat
+        if screenWidth > 320 {
+            height = (self.view.bounds.size.height - (spacing + tabBar + navBar)) / 2.3
+        } else {
+            height = (self.view.bounds.size.height - (spacing + tabBar + navBar)) / 2.1
+
+        }
+        
         
         return CGSizeMake(width, height)
     }

@@ -1218,12 +1218,24 @@
                                     <rect key="frame" x="0.0" y="0.0" width="145" height="211"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="meow" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-mj-TXy">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="desk" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-mj-TXy">
                                             <rect key="frame" x="0.0" y="0.0" width="145" height="120"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="tVS-xx-Dvk"/>
                                                 <constraint firstAttribute="width" secondItem="JDp-mj-TXy" secondAttribute="height" multiplier="29:24" id="yqX-p0-HHf"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="tVS-xx-Dvk"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular">
+                                                <mask key="constraints">
+                                                    <include reference="tVS-xx-Dvk"/>
+                                                    <exclude reference="yqX-p0-HHf"/>
+                                                </mask>
+                                            </variation>
                                             <variation key="widthClass=compact" misplaced="YES">
                                                 <rect key="frame" x="8" y="8" width="140" height="120"/>
                                             </variation>
@@ -1259,10 +1271,15 @@
                                     <constraint firstItem="JDp-mj-TXy" firstAttribute="top" secondItem="izS-1Y-KEH" secondAttribute="topMargin" id="GUj-v9-l3t"/>
                                     <constraint firstItem="JDp-mj-TXy" firstAttribute="top" secondItem="izS-1Y-KEH" secondAttribute="topMargin" constant="-8" id="Hy0-NC-5I1"/>
                                     <constraint firstItem="eui-G8-MRt" firstAttribute="top" secondItem="Sw6-VA-gjE" secondAttribute="bottom" constant="5" id="J3W-rB-FhK"/>
+                                    <constraint firstItem="JDp-mj-TXy" firstAttribute="centerX" secondItem="Sw6-VA-gjE" secondAttribute="centerX" id="RJ0-bF-0KJ"/>
+                                    <constraint firstItem="JDp-mj-TXy" firstAttribute="leading" secondItem="izS-1Y-KEH" secondAttribute="leading" id="S4G-fo-QYf"/>
                                     <constraint firstItem="eui-G8-MRt" firstAttribute="trailing" secondItem="izS-1Y-KEH" secondAttribute="trailingMargin" id="THv-he-hfV"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="VLZ-2c-n17" secondAttribute="bottom" constant="1" id="Uqb-Sr-KqK"/>
+                                    <constraint firstItem="Sw6-VA-gjE" firstAttribute="top" secondItem="JDp-mj-TXy" secondAttribute="bottom" constant="8" symbolic="YES" id="Vrf-GB-Jg8"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="JDp-mj-TXy" secondAttribute="trailing" constant="-8" id="Z9q-q2-wPW"/>
+                                    <constraint firstItem="JDp-mj-TXy" firstAttribute="centerX" secondItem="Sw6-VA-gjE" secondAttribute="centerX" id="c5Y-E7-XVn"/>
                                     <constraint firstItem="VLZ-2c-n17" firstAttribute="leading" secondItem="izS-1Y-KEH" secondAttribute="leadingMargin" id="dXv-d4-bpk"/>
+                                    <constraint firstItem="JDp-mj-TXy" firstAttribute="top" secondItem="izS-1Y-KEH" secondAttribute="top" id="faX-Pw-9SD"/>
                                     <constraint firstItem="VLZ-2c-n17" firstAttribute="top" secondItem="eui-G8-MRt" secondAttribute="bottom" id="gIH-i6-OLZ"/>
                                     <constraint firstItem="JDp-mj-TXy" firstAttribute="top" secondItem="izS-1Y-KEH" secondAttribute="topMargin" id="hlq-F3-UvU"/>
                                     <constraint firstItem="JDp-mj-TXy" firstAttribute="leading" secondItem="izS-1Y-KEH" secondAttribute="leadingMargin" constant="-8" id="kSy-Ri-YNz"/>
@@ -1273,7 +1290,25 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="GUj-v9-l3t"/>
+                                        <exclude reference="RJ0-bF-0KJ"/>
+                                        <exclude reference="S4G-fo-QYf"/>
+                                        <exclude reference="c5Y-E7-XVn"/>
+                                        <exclude reference="faX-Pw-9SD"/>
                                         <exclude reference="hlq-F3-UvU"/>
+                                        <exclude reference="Vrf-GB-Jg8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="Hy0-NC-5I1"/>
+                                        <include reference="RJ0-bF-0KJ"/>
+                                        <include reference="S4G-fo-QYf"/>
+                                        <exclude reference="Z9q-q2-wPW"/>
+                                        <exclude reference="c5Y-E7-XVn"/>
+                                        <include reference="faX-Pw-9SD"/>
+                                        <exclude reference="kSy-Ri-YNz"/>
+                                        <include reference="Vrf-GB-Jg8"/>
+                                        <exclude reference="ro3-Qi-P8H"/>
                                     </mask>
                                 </variation>
                                 <connections>
@@ -1307,7 +1342,6 @@
         <image name="desk" width="533" height="400"/>
         <image name="furniture" width="48" height="48"/>
         <image name="housing" width="32" height="32"/>
-        <image name="meow" width="683" height="384"/>
         <image name="new" width="32" height="32"/>
         <image name="newSelected" width="32" height="32"/>
         <image name="sell" width="25" height="25"/>
