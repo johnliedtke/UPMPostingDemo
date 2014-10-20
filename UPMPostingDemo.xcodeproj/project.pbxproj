@@ -35,6 +35,15 @@
 		5270002519F2F65900A2911D /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002419F2F65900A2911D /* TextViewExtension.swift */; };
 		5270002619F2F8CF00A2911D /* TextViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002419F2F65900A2911D /* TextViewExtension.swift */; };
 		5270002C19F30ED300A2911D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002B19F30ED300A2911D /* UIColorExtension.swift */; };
+		5270002E19F355C100A2911D /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002D19F355C100A2911D /* Circle.swift */; };
+		5270003019F3694200A2911D /* SellTitlePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002F19F3694200A2911D /* SellTitlePhotoTableViewCell.swift */; };
+		5270003219F36B3C00A2911D /* SellPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270003119F36B3C00A2911D /* SellPriceViewController.swift */; };
+		5270003619F3981A00A2911D /* SellDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270003519F3981A00A2911D /* SellDescriptionViewController.swift */; };
+		5270003819F4580D00A2911D /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270003719F4580D00A2911D /* UIViewControllerExtension.swift */; };
+		5270003A19F45B1A00A2911D /* DescriptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270003919F45B1A00A2911D /* DescriptionTextView.swift */; };
+		5270003B19F45DAB00A2911D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270002B19F30ED300A2911D /* UIColorExtension.swift */; };
+		5270003D19F4C9B900A2911D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270003C19F4C9B900A2911D /* CategoryViewController.swift */; };
+		5270003F19F4CD9900A2911D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270003E19F4CD9900A2911D /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +126,14 @@
 		526D9BEA19E20451001DE50E /* ListingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingCollectionViewCell.swift; sourceTree = "<group>"; };
 		5270002419F2F65900A2911D /* TextViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewExtension.swift; sourceTree = "<group>"; };
 		5270002B19F30ED300A2911D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5270002D19F355C100A2911D /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		5270002F19F3694200A2911D /* SellTitlePhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellTitlePhotoTableViewCell.swift; sourceTree = "<group>"; };
+		5270003119F36B3C00A2911D /* SellPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellPriceViewController.swift; sourceTree = "<group>"; };
+		5270003519F3981A00A2911D /* SellDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellDescriptionViewController.swift; sourceTree = "<group>"; };
+		5270003719F4580D00A2911D /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5270003919F45B1A00A2911D /* DescriptionTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionTextView.swift; sourceTree = "<group>"; };
+		5270003C19F4C9B900A2911D /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		5270003E19F4CD9900A2911D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,9 +208,12 @@
 		52206C9919E1E635002DDADD /* UPMPostingDemo */ = {
 			isa = PBXGroup;
 			children = (
-				52206C9C19E1E635002DDADD /* AppDelegate.swift */,
+				5270003519F3981A00A2911D /* SellDescriptionViewController.swift */,
 				520A1CD919E209480087936F /* ListingsViewController.swift */,
 				520A1CDB19E20ECE0087936F /* SellViewController.swift */,
+				5270003119F36B3C00A2911D /* SellPriceViewController.swift */,
+				5270003C19F4C9B900A2911D /* CategoryViewController.swift */,
+				52206C9C19E1E635002DDADD /* AppDelegate.swift */,
 				52206CA019E1E635002DDADD /* Main.storyboard */,
 				52206CA319E1E635002DDADD /* Images.xcassets */,
 				52206CA519E1E635002DDADD /* LaunchScreen.xib */,
@@ -256,6 +276,10 @@
 				526D9BCF19E203ED001DE50E /* ListingCollectionView.h */,
 				526D9BCD19E203ED001DE50E /* Supporting Files */,
 				526D9BEA19E20451001DE50E /* ListingCollectionViewCell.swift */,
+				5270003919F45B1A00A2911D /* DescriptionTextView.swift */,
+				5270002F19F3694200A2911D /* SellTitlePhotoTableViewCell.swift */,
+				5270003E19F4CD9900A2911D /* CategoryTableViewCell.swift */,
+				5270002D19F355C100A2911D /* Circle.swift */,
 			);
 			path = ListingCollectionView;
 			sourceTree = "<group>";
@@ -289,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				5270002419F2F65900A2911D /* TextViewExtension.swift */,
+				5270003719F4580D00A2911D /* UIViewControllerExtension.swift */,
 				5270002B19F30ED300A2911D /* UIColorExtension.swift */,
 			);
 			name = "UI Extensions";
@@ -471,8 +496,12 @@
 			files = (
 				52206C9D19E1E635002DDADD /* AppDelegate.swift in Sources */,
 				520A1CDA19E209480087936F /* ListingsViewController.swift in Sources */,
+				5270003219F36B3C00A2911D /* SellPriceViewController.swift in Sources */,
+				5270003619F3981A00A2911D /* SellDescriptionViewController.swift in Sources */,
+				5270003819F4580D00A2911D /* UIViewControllerExtension.swift in Sources */,
 				5270002C19F30ED300A2911D /* UIColorExtension.swift in Sources */,
 				520A1CDC19E20ECE0087936F /* SellViewController.swift in Sources */,
+				5270003D19F4C9B900A2911D /* CategoryViewController.swift in Sources */,
 				5270002519F2F65900A2911D /* TextViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,7 +519,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				526D9BEB19E20451001DE50E /* ListingCollectionViewCell.swift in Sources */,
+				5270003019F3694200A2911D /* SellTitlePhotoTableViewCell.swift in Sources */,
+				5270003A19F45B1A00A2911D /* DescriptionTextView.swift in Sources */,
 				5270002619F2F8CF00A2911D /* TextViewExtension.swift in Sources */,
+				5270003F19F4CD9900A2911D /* CategoryTableViewCell.swift in Sources */,
+				5270002E19F355C100A2911D /* Circle.swift in Sources */,
+				5270003B19F45DAB00A2911D /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

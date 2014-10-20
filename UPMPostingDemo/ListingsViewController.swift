@@ -11,6 +11,7 @@ import ListingCollectionView
 
 
 
+
 let reuseIdentifier = "listingCollectionViewCell"
 
 
@@ -24,9 +25,7 @@ class ListingsViewController: UICollectionViewController, UICollectionViewDelega
         
         self.fetchListings()
     }
-    
-    
-
+  
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -74,7 +73,7 @@ class ListingsViewController: UICollectionViewController, UICollectionViewDelega
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as ListingCollectionViewCell
 
         var listing = listings[indexPath.row] as PFObject
-        cell.title = listing["title"] as String
+        cell.title = listing["title"] as? String
         cell.price = listing["price"] as? String
         
         cell.startLoading()

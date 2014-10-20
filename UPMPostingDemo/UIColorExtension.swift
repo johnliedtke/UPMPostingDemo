@@ -20,4 +20,18 @@ extension UIColor {
         return lightPurpleColor
     }
     
+    class func standardBackgroundColor() -> UIColor {
+        var standardBackgroundColor = UIColor(red: 250.0/255.0, green: 250.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        return standardBackgroundColor
+    }
+    
+    class func flatGreenColor() -> UIColor {
+        return UIColor(red: 46.0/255.0, green: 204.0/255.0, blue: 113.0/255.0, alpha: 1.0)
+    }
+    
+    class func tabBarUnselectedColor() -> UIColor {
+        return UIColor(red: 155.0/255.0, green: 155.0/255.0, blue: 155.0/255.0, alpha: 1.0)
+    }
+
+    
 }

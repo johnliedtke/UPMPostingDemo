@@ -36,11 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             newListingsTabBarItem.image = UIImage(named: "new.png").imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
             newListingsTabBarItem.selectedImage = UIImage(named: "newSelected.png").imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
             
+            var sellTabBarItem = items[1]
+            sellTabBarItem.image = UIImage(named: "sell.png").imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+            sellTabBarItem.selectedImage = UIImage(named: "sellSelected.png").imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+            
         }
       
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightPurpleColor()], forState:.Normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.darkPurpleColor()], forState:.Selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.tabBarUnselectedColor()], forState:.Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightPurpleColor()], forState:.Selected)
 
 
 

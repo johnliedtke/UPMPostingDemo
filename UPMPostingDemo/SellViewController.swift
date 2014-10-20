@@ -16,8 +16,8 @@ class SellViewController: UITableViewController, UIImagePickerControllerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
+        self.automaticallyAdjustsScrollViewInsets = false
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,10 +27,24 @@ class SellViewController: UITableViewController, UIImagePickerControllerDelegate
 
 
     @IBAction func post(sender: AnyObject) {
-        
-
-    
+        // Post to parse
     }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return self.getNavigationBarHeight() + 30.0
+        } else {
+            return UITableViewAutomaticDimension
+        }
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if tableView.numberOfSections() - 1 == section {
+            return 75.0
+        }
+        return 0
+    }
+
     
     func cameraButtonTapped() {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
